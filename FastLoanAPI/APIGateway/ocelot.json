@@ -1,0 +1,325 @@
+{
+    "Routes": [
+
+        //UserServiceMB
+        {
+            "DownstreamPathTemplate": "/api/MB",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 40390
+              }
+            ],
+            "UpstreamPathTemplate": "/api/MB",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/MB/{Email}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 40390
+              }
+            ],
+            "UpstreamPathTemplate": "/api/MB/{Email}",
+            "UpstreamHttpMethod": [ "Get", "Put" ]
+        },
+
+        //UserML
+        {
+            "DownstreamPathTemplate": "/api/ML",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 40390
+              }
+            ],
+            "UpstreamPathTemplate": "/api/ML",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/ML/{Email}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "localhost",
+                "Port": 40390
+              }
+            ],
+            "UpstreamPathTemplate": "/api/ML/{Email}",
+            "UpstreamHttpMethod": [ "Get", "Put" ]
+        },
+
+
+        //LoanOffer
+        {
+            "DownstreamPathTemplate": "/api/LoanOffer",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/LoanOffer",
+            "UpstreamHttpMethod": [ "Post", "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/LoanOffer/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/LoanOffer/{id}",
+            "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/LoanOffer/LenderId/{lenderId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/LoanOffer/LenderId/{lenderId}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+
+        //LoanRequest
+        {
+            "DownstreamPathTemplate": "/api/LoanRequest",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/LoanRequest",
+            "UpstreamHttpMethod": [ "Post", "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/LoanRequest/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/LoanRequest/{id}",
+            "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/LoanRequest/LoanLenderId/{lenderId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/LoanRequest/LoanLenderId/{lenderId}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+
+        //Loan
+        {
+            "DownstreamPathTemplate": "/api/Loans",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Loans",
+            "UpstreamHttpMethod": [ "Post", "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Loans/{id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Loans/{id}",
+            "UpstreamHttpMethod": [ "Get", "Delete" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Loanslid/{lenderId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Loanslid/{lenderId}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Loansbid/{borrowerId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7048
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Loansbid/{borrowerId}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+
+        //AuthService
+        {
+            "DownstreamPathTemplate": "/api/Auth/register",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7040
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Auth/register",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Auth/login",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7040
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Auth/login",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+
+        //ChatService
+        //{
+        //    "DownstreamPathTemplate": "/api/Chat",
+        //    "DownstreamScheme": "https",
+        //    "DownstreamHostAndPorts": [
+        //        {
+        //            "Host": "localhost",
+        //            "Port": 7134
+        //        }
+        //    ],
+        //    "UpstreamPathTemplate": "/api/Chat",
+        //    "UpstreamHttpMethod": [ "Post", "Get" ]
+        //},
+        {
+            "DownstreamPathTemplate": "/chat",
+            "DownstreamScheme": "wss",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7134
+                }
+            ],
+            "UpstreamPathTemplate": "/chat",
+            //"UpstreamHttpMethod": [ "Post", "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Chat/{Id}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7134
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Chat/{Id}",
+            "UpstreamHttpMethod": [ "Delete" ]
+        },
+
+
+        // Recommendation service
+
+        {
+            "DownstreamPathTemplate": "/api/borrower",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7233
+                }
+            ],
+            "UpstreamPathTemplate": "/api/borrower",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/lender",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7233
+                }
+            ],
+            "UpstreamPathTemplate": "/api/lender",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+      {
+        "DownstreamPathTemplate": "/api/recommendation/loanoffer",
+        "DownstreamScheme": "https",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 7233
+          }
+        ],
+        "UpstreamPathTemplate": "/api/recommendation/loanoffer",
+        "UpstreamHttpMethod": [ "Post" ]
+      },
+        {
+            "DownstreamPathTemplate": "/api/reltolo/{loid}/{lid}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7233
+                }
+            ],
+            "UpstreamPathTemplate": "/api/reltolo/{loid}/{lid}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/reltob/{bid}/{lid}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7233
+                }
+            ],
+            "UpstreamPathTemplate": "/api/reltob/{bid}/{lid}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/LenderRecommendation/{bid}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7233
+                }
+            ],
+            "UpstreamPathTemplate": "/api/LenderRecommendation/{bid}",
+            "UpstreamHttpMethod": [ "Get" ]
+        }
+    ],
+  "GlobalConfiguration": {}
+
+}

@@ -1,0 +1,6 @@
+<div class="loanheader">Active Loans</div>
+<div class = "row">
+<div *ngFor="let loan of service.list" class="col-sm-3">
+<app-activeloancard [lenderName] = "loan.lenderName" [borrowername]="loan.borrowerName" [loantype]="loan.loanType" [amount]="loan.loanAmount"  [rateofinterest]="loan.rateOfInterest" [timeperiod] = "loan.timePeriod" [sourceofpay] = "loan.sourceOfPay" [numberofmonths] = "loan.numberOfMonths"></app-activeloancard>
+</div>
+</div>

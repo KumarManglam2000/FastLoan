@@ -1,0 +1,19 @@
+<mat-card class="cards" >
+  <mat-card-title>{{loantype}}</mat-card-title>
+  <mat-card-subtitle>{{lenderName}}</mat-card-subtitle>
+  <mat-card-content>
+    <p>Loan Amount : {{amount}}</p>
+    <p>Rate Of Interest : {{rateofinterest}}</p>
+    <p>Time Period(years) : {{timeperiod}}</p>
+    <p>RequestedDate : {{date}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    
+   
+   
+    <button mat-raised-button color="primary" >All Details</button>
+   
+    <button mat-raised-button color="primary" (click)="openDialog(loanOfferId,lenderId,lenderName)">Request Loan</button>
+
+  </mat-card-actions>
+</mat-card>

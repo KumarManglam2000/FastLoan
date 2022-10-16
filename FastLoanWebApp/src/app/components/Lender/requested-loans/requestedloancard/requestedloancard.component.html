@@ -1,0 +1,33 @@
+<mat-card class="cards">
+  <!-- {{loanrequestid}} -->
+    <mat-card-title>{{borrowername}}</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+    <mat-card-content>
+      <!-- <p>{{loanofferid}}</p> -->
+      <p>Source Of Pay - {{sourceofpay}}</p>
+      <p>No of Installments - {{numberofmonths}}</p>
+      <p>RequestedDate - {{date}}</p>
+    </mat-card-content>
+    <mat-card-actions class="actions">
+      <button  mat-raised-button color="primary" (click)="onAccept(loanrequestid,loanofferid,lenderId,lendername)">Accept</button>
+      <button  mat-raised-button color="warn" (click)="onDecline(loanrequestid)">Decline</button>
+    </mat-card-actions>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            LoanOffer Details
+          </mat-panel-title>
+          <mat-panel-description>
+           {{loanType}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Loan Amount - {{loanAmount}}</p>
+        <p>Rate of Interest - {{rateOfInterest}}</p>
+        <p>Time Period {{timePeriod}}</p>
+        <p>Created Date - {{createdDate}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card>
+  

@@ -1,0 +1,45 @@
+<div class="user-register-layout">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title> Manage Profile Lender</mat-panel-title>
+            <mat-panel-description>
+                Click to edit Profile
+                <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <form class="register-form-layout"#userUpdateFormRef="ngForm"
+        (ngSubmit)="UpdateUserL(userUpdateFormRef)">
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" [(ngModel)]="service.formData.name" name="name" class="form-control"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group" [class.has-error]="email.invalid && email.touched">
+                <label for="email" class="control-label">Email</label>
+                <input id="email" required email name="text" #email="ngModel" [(ngModel)]="service.formData.email" type="text"
+                    name="email" class="form-control" disabled>
+            </div>
+            <!-- <div class="form-group" [class.has-error]="password.touched && password.invalid">
+                <label for="password" class="control-label">Password</label>
+                <input id="password" required type="text" class="form-control" name="password"
+                    [(ngModel)]="service.formData.password" #password="ngModel">
+                <span class="help-block" *ngIf="password.touched && password.errors?.['required']">
+                    Password is Required
+                </span>
+            </div> -->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mobile No.</label>
+                <input type="text" [(ngModel)]="service.formData.mobileNo" name="mobileNo" class="form-control"
+                    id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">PAN</label>
+                <input type="text" [(ngModel)]="service.formData.pan" name="pan" class="form-control"
+                    id="exampleInputPassword1">
+            </div>            
+
+            <button type="submit" class="btn btn-primary">Update Profile</button>
+        </form>
+    </mat-expansion-panel>
+</div>

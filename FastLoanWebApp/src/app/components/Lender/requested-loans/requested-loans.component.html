@@ -1,0 +1,7 @@
+<div class="loanheader">Requested Loans</div>
+<div class = "row">
+<div *ngFor="let loan of service.list" class="col-sm-3">
+<app-requestedloancard [lendername] = "loan.lenderName" [borrowerId]="loan.borrowerId" [lenderId]="loan.lenderId" [loanofferid]="loan.loanOfferId" [borrowername] = "loan.borrowerName" [loanrequestid] = "loan.loanRequestId" [date]="loan.date" [sourceofpay]="loan.sourceOfPay" [numberofmonths]="loan.numberOfMonths"></app-requestedloancard>
+</div>
+</div>
+

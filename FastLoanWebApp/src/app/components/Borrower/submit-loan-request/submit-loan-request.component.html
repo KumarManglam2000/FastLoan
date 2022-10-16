@@ -1,0 +1,61 @@
+<!-- <div class="jumbotron" >
+    <h1 class="display-4 text-center ">Loan Request</h1>
+ </div> -->
+ <h2 mat-dialog-title>Loan Request</h2>
+<mat-dialog-content class="mat-typography">
+<div class="container">
+ <div class="row">
+<div class="col-lg-6 " >
+
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+<input  type="hidden" name="LoanRequestId">
+<input  type="hidden" [(ngModel)]="LoanRequest.loanOfferId" name="loanofferId">
+<div class="form-group">
+<label for="NumberOfMonths" class="nom" >Number of Installments(months) </label>
+<input id="NumberOfMonths" type="text" [(ngModel)]="LoanRequest.numberOfMonths" name="numberofmonths">
+</div>
+<div class="form-group">
+<label for="source" class="nom">Source of Pay  </label>
+<input id="source"  type="text" [(ngModel)]="LoanRequest.sourceOfPay" name="sourceOfPay">
+</div>
+<!-- <div class="form-group">
+<label for="documents" class="nom">Upload Documents </label>
+<input id="documents"  type="file" >
+</div> -->
+<div class="form-group">
+<label for="date" class="nom"> Date </label>
+<input id="date" type="datetime-local" [(ngModel)]="LoanRequest.date" name="date">
+</div>
+
+<!-- <div class="form-group">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div> -->
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="btn btn-primary" >Cancel</button>
+  <div class="form-group">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="btn btn-primary" type="submit">Submit</button>
+</div>
+</mat-dialog-actions>
+</form>
+</div>
+<!-- <div class="col-lg-6">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Loan Details</h5>
+      <p class="card-text"></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Loan Amount = 1000</li>
+      <li class="list-group-item">Rate of Interest=15%</li>
+      <li class="list-group-item">Time Period = 3</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+
+</div> -->
+</div>
+</div>
+</mat-dialog-content>

@@ -1,0 +1,26 @@
+<ng-container class="dashboard">
+    <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true"mode="side">
+        <mat-nav-list>
+            <a mat-list-item>Lender</a>
+
+            <a mat-list-item routerLink="lenderprofile">Manage Profile</a>
+            <a mat-list-item routerLink="createloan" routerLinkActive="active">Create Loan Offering</a>
+            <a mat-list-item routerLink="loanofferings">My Loan Offering</a>
+            <a mat-list-item routerLink="activeloans">View Active Loan</a>
+            <a mat-list-item routerLink="requestedloans">View Request Loan</a>
+            <!-- <a mat-list-item routerLink="chat">Chat</a> -->
+        </mat-nav-list>
+        
+        
+    </mat-sidenav>
+<mat-sidenav-content >
+    <div style="height:88vh;"><router-outlet></router-outlet></div>
+    
+</mat-sidenav-content>
+
+</mat-sidenav-container>
+</ng-container>

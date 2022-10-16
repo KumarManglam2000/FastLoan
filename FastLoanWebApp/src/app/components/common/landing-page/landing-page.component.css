@@ -1,0 +1,214 @@
+/* font-family: 'poppins',sans-serif; */
+/* font-family:montserrat; */
+
+:root{
+    --main-color:rgba(128, 0, 0, 0.89);
+}
+.theme-text{
+    color:var(--main-color);
+}
+
+.section-padding{
+    padding:100px 0;
+}
+.carousel-item{
+    height:100vh;
+    min-height:300px;
+}
+.carousel-caption{
+    bottom:220px;
+    z-index:1;
+}
+.carousel-caption h5{
+    font-size:45px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    margin-top:25px;
+    font-family:montserrat;
+}
+.carousel-caption p{
+    width:60%;
+    margin:auto;
+    font-size: 18px;
+    line-height: 1.9;
+    
+    font-family:montserrat;
+    
+    
+}
+.carousel-inner::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.7);
+    z-index:1;
+}
+
+.w-100{
+    height:100vh;
+}
+.services .card-body i{
+    font-size: 50px;
+    
+}
+.services .card-body{
+    width:100%;
+    padding: 10px 20px;
+}
+.portfolio .card{
+    box-shadow: 15px 15px 40px rgba(207, 136, 136, 0.415);
+}
+*{
+ 
+    box-sizing: border-box;
+}
+.container{
+    max-width:1170px;
+    margin:auto;
+}
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+}
+ul{
+    list-style: none;
+}
+/* by me */
+.card{
+    margin-top: 15px;
+}
+.card .card-body{
+    padding: 15px;
+    font-family:montserrat;
+    font-size: medium;    
+}
+h2{
+    font-size:x-large;
+    font-family:montserrat;
+}
+/* .f{
+    font-family: 'Special Elite', cursive;
+    color: #c77dff;
+} */
+
+
+/* responsive css */
+@media only screen and (min-width:768px) and (max-width:991px){
+    .carousel-caption{
+        bottom: 370px;
+    }
+    .carousel-caption p{
+        width:100%;
+    }
+    .card{
+        margin-bottom:30px;
+
+    }
+    .img-area img{
+        width:100%;
+    }
+    
+    
+}
+@media only screen and (max-width: 767px){
+    .navbar-nav{
+        text-align:center;
+    }
+    .carousel-caption{
+        bottom:125px;
+
+    }
+    .carousel-caption h5{
+       
+        font-size: 17px;
+        color:aqua;
+    
+    }
+    .carousel-caption a{
+        padding:10px 15px;
+    }
+    .carousel-caption p{
+        width:100%;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+    .about-text{
+        padding-top:50px;
+
+    }
+    .card{
+        margin-bottom: 30px;
+        
+    }
+    
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+/* Style the Sticky icons on web page */
+.stickyicon-list {
+    /* position: fixed;
+    transform: translateY(-50%); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.stickyicon-list a {
+    display: block;
+    text-align: center;
+    padding: 5px;
+
+    /* transition: all 0.5s ease; */
+    color: white;
+    font-size: 25px;
+    margin-left: 15px;
+    border-radius: 10%;
+}
+
+/* HOver affect on sticky social media icons */
+.stickyicon-list a:hover {
+    color: coral;
+    width: 20px;
+}
+
+/* Now we have to design each icon of social media */
+.facebook {
+    background: #3b5998;
+    color: white;
+}
+
+.twitter {
+    color: white;
+    background: #00acee;
+}
+
+.linkedin {
+    background: #0e76a8;
+    color: white;
+}
+
+.instagram {
+    background: #ac2bac;
+    color: white;
+}
+
+.github {
+    color: white;
+    background: #000000;
+}
+
+.dropbox {
+    color: white;
+    background: #007ee5;
+}
+.text-muted{
+    font-family:montserrat;
+    font-size: medium;
+}

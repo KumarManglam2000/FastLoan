@@ -1,0 +1,7 @@
+
+<div class="loanheader">My Loan Offerings</div>
+<div class = "row">
+<div *ngFor="let loan of service.list" class="col-sm-3 " >
+<app-card [loanofferid] ="loan.loanOfferId"  [lenderid] = "loan.lenderId"  [loantype]="loan.loanType" [amount]="loan.loanAmount" [rateofinterest]="loan.rateOfInterest" [timeperiod]="loan.timePeriod" [date]="loan.createdDate" ></app-card>
+</div>
+</div>

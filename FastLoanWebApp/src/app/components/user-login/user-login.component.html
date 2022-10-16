@@ -1,0 +1,51 @@
+<!-- <a mat-button><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="youtube"></mat-icon> Home</a> -->
+
+<div class="user-login-layout">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                User Login!! 
+            </mat-panel-title>
+            <mat-panel-description>
+                Enter your details
+                <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <form class="login-form-layout" [formGroup]="userLoginReference" (ngSubmit)="userLogin(userLoginReference)">
+            <h1>{{userLoginFormMessage}}</h1>
+            <mat-form-field>
+                <mat-label>Enter your email</mat-label>
+                <input type="text" matInput placeholder="Enter Your Email" formControlName="useremail">
+                <mat-error
+                    *ngIf="userLoginReference.get('useremail')?.touched && userLoginReference.get('useremail')?.hasError('required')">
+                    User Email Required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error
+                    *ngIf="userLoginReference.get('password')?.touched && userLoginReference.get('password')?.hasError('required')">
+                    Password Required</mat-error>
+            </mat-form-field>
+
+            <!-- <mat-form-field>
+                <mat-label>Enter User Role</mat-label>
+                <input type="text" matInput placeholder="Enter Your Role" formControlName="role">
+            </mat-form-field> -->
+
+            <mat-form-field>
+                <mat-label>Choose your role</mat-label>
+                <mat-select formControlName="role">
+                    <mat-option value="Borrower">Borrower</mat-option>
+                    <mat-option value="Lender">Lender</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button type="submit" class="btn btn-primary" [disabled]="userLoginReference.invalid">Login</button>
+        </form>
+    </mat-expansion-panel>
+</div>

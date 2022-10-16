@@ -1,0 +1,10 @@
+.col-sm-3{
+    padding-left: 50px;
+}
+.loanheader{
+    text-align: center;
+    font-weight: 1000;
+    color: gray;
+    font-size: 35px;
+    padding: 25px;
+}

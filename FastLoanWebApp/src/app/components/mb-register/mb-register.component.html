@@ -1,0 +1,87 @@
+<!-- <p>user-register works!</p> -->
+<!-- <button mat-raised-button color="primary" (click)="addUser()"> Add User</button> -->
+<div class="user-register-layout">
+    <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title> Borrower Registration </mat-panel-title>
+            <mat-panel-description>
+                Fill your details
+                <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <form class="register-form-layout" #userRegistrationFormRef="ngForm"
+            (ngSubmit)="addUser(userRegistrationFormRef)">
+            <!-- <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="text" [(ngModel)]="mbregister.email" name="name" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+            </div> -->
+
+            <div class="mb-3">
+                <div class="form-group" [class.has-error]="email.invalid && email.touched">
+                    <label for="email" class="control-label">Email</label>
+                    <input id="email" required email name="text" #email="ngModel" [(ngModel)]="mbregister.email"
+                        type="text" name="email" class="form-control">
+                    <span class="help-block" *ngIf="email.errors?.['required'] && email.touched">
+                        Email is required
+                    </span>
+                    <span class="help-block" *ngIf="email.errors?.['email'] && email.touched">
+                        Email is invalid
+                    </span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group" [class.has-error]="password.touched && password.invalid">
+                    <label for="password" class="control-label">Password</label>
+                    <input id="password" required type="text" class="form-control" name="password"
+                        [(ngModel)]="mbregister.password" #password="ngModel">
+                    <span class="help-block" *ngIf="password.touched && password.errors?.['required']">
+                        Password is Required
+                    </span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" [(ngModel)]="mbregister.name" name="name" class="form-control"
+                    id="exampleInputEmail1" aria-describedby="emailHelp" required>
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">PAN</label>
+                <input type="text" [(ngModel)]="mbregister.pan" name="pan" class="form-control"
+                    id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mobile No.</label>
+                <input type="text" [(ngModel)]="mbregister.mobileNo" name="mobileNo" class="form-control"
+                    id="exampleInputPassword1" required>
+
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Address</label>
+                <input type="text" [(ngModel)]="mbregister.address" name="address" class="form-control"
+                    id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">MonthlyIncome</label>
+                <input type="text" [(ngModel)]="mbregister.monthlyIncome" name="monthlyIncome" class="form-control"
+                    id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">DOB</label>
+                <input type="date" [(ngModel)]="mbregister.dob" name="dob" class="form-control"
+                    id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Gender</label>
+                <mat-select [(ngModel)]="mbregister.gender" name="gender" class="form-control" required>
+                    <mat-option value="Male">Male</mat-option>
+                    <mat-option value="Female">Female</mat-option>
+                    <mat-option value="Other">Other</mat-option>
+                </mat-select>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="userRegistrationFormRef.invalid">Register</button>
+        </form>
+    </mat-expansion-panel>
+</div>

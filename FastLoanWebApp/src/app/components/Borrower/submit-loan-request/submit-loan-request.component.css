@@ -1,0 +1,24 @@
+.jumbotron
+{
+   size: 20px;
+    padding: 20px;
+    background-color: aliceblue;
+}
+.display-4 
+{
+font-size: 45px;
+}
+.col-lg-6
+{
+
+    padding:10px;
+    height: 15cm;
+}
+.form-group
+{
+    padding: 10px;
+
+}
+.nom{
+    padding-right: 20px;
+}

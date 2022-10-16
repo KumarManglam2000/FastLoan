@@ -1,0 +1,23 @@
+<mat-toolbar color="" class="mat-elevation-z8 ">
+  <mat-toolbar-row class="toolbar-row">
+      <label routerLink="" class="logo-layout"> <img src="../../../../assets/img/logo.png" alt="" class="logo">
+          FASTLOAN</label>
+      <span class="spacer"></span>
+      <!-- <a mat-button>Home</a> -->
+      <!-- <a mat-button>Chat</a> -->
+      <a mat-button>About us</a>
+      <a mat-button *ngIf="!isLoggedIn()" routerLink="login" >Login</a>
+      
+      <div *ngIf="!isLoggedIn()" class="dropdown">
+          <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Register
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" routerLink="../mlregister">Lender</a></li>
+              <li><a class="dropdown-item" routerLink="../mbregister">Borrower</a></li>
+          </ul>
+      </div>
+      <a mat-button *ngIf="isLoggedIn()" routerLink="logout">Logout</a>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,7 @@
+[aria-label=primary] {
+    background-color: blue;
+  }
+  
+  [aria-label=accent] {
+    background-color: aqua;
+  }

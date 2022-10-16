@@ -1,0 +1,49 @@
+<div class="user-register-layout">
+    <mat-expansion-panel class="panel">
+        <mat-expansion-panel-header>
+            <mat-panel-title> Lender Registration</mat-panel-title>
+            <mat-panel-description>
+                Fill your details
+                <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <form class="register-form-layout" #userRegistrationFormRef="ngForm"
+            (ngSubmit)="addUser(userRegistrationFormRef)">
+            <div class="form-group" [class.has-error]="email.invalid && email.touched">
+                <label for="email" class="control-label">Email</label>
+                <input id="email" required email name="text" #email="ngModel" [(ngModel)]="mlregister.email" type="text"
+                    name="email" class="form-control">
+                <span class="help-block" *ngIf="email.errors?.['required'] && email.touched">
+                    Email is required
+                </span>
+                <span class="help-block" *ngIf="email.errors?.['email'] && email.touched">
+                    Email is invalid
+                </span>
+            </div>
+            <div class="form-group" [class.has-error]="password.touched && password.invalid">
+                <label for="password" class="control-label">Password</label>
+                <input id="password" required type="text" class="form-control" name="password"
+                    [(ngModel)]="mlregister.password" #password="ngModel">
+                <span class="help-block" *ngIf="password.touched && password.errors?.['required']">
+                    Password is Required
+                </span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input required type="text" [(ngModel)]="mlregister.name" name="name" class="form-control"
+                    id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mobile No.</label>
+                <input required type="text" [(ngModel)]="mlregister.mobileNo" name="mobileNo" class="form-control"
+                    id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">PAN</label>
+                <input required type="text" [(ngModel)]="mlregister.pan" name="pan" class="form-control"
+                    id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="userRegistrationFormRef.invalid">Register</button>
+        </form>
+    </mat-expansion-panel>
+</div>

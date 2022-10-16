@@ -1,0 +1,15 @@
+
+
+
+    <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="All LoanOffers" >
+            <app-search-loan-offer (searchTextChanged)="onSearchTextChanged($event)"></app-search-loan-offer>
+            <div class = "row">
+            <div *ngFor="let loan of offers" class="col-lg-12 " >
+                <div *ngIf="searchText==='' || loan.loanType.toLowerCase().includes(searchText)">
+            <app-borrowerloanoffercard [lenderId]="loan.lenderId" [loanOfferId]="loan.loanOfferId" [lenderName] = "loan.lenderName" [loantype]="loan.loanType" [amount]="loan.loanAmount" [rateofinterest]="loan.rateOfInterest" [timeperiod]="loan.timePeriod" [date]="loan.createdDate" ></app-borrowerloanoffercard>
+            </div>
+            </div></div></mat-tab>
+        <mat-tab label=" Loan Recommendations"><app-recommendation></app-recommendation></mat-tab>
+        
+      </mat-tab-group>

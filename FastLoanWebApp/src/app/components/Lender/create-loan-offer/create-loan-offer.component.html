@@ -1,0 +1,47 @@
+
+<form class="loanoffer" #form="ngForm" (submit)="onSubmit(form)">
+<div class="container mt-5">
+   
+<h3>Loan Offer</h3>
+<div class="row">
+     <input type="hidden"  class="form-control" name="loanOfferId" #loanType="ngModel" [(ngModel)]="service.formData.lenderName" /> 
+    <div class="form-group col-lg-6 col-6">
+        <label>Loan Type</label>
+        
+            <select class="form-control" name="loanType" #loanType="ngModel" [(ngModel)]="service.formData.loanType">
+              <option value="Education Loan">Education Loan</option>
+              <option value="Gold Loan">Gold Loan</option>
+              <option value="Agriculture Loan">Agriculture Loan</option>
+              <option value="Car Loan">Car Loan</option>
+              <option value="Home Loan">Home Loan</option>
+              <option value="Personal Loan">Personal Loan</option>
+            </select>
+          
+        <!-- <input type="text"  class="form-control" name="loanType" #loanType="ngModel" [(ngModel)]="service.formData.loanType"/> -->
+    </div>
+    <div class="form-group col-lg-6 col-6">
+            <label>Loan Amount</label>
+            <input type="text"  class="form-control" name="loanAmount" #loanAmount="ngModel" [(ngModel)]="service.formData.loanAmount" />
+        </div>
+        <div class="form-group col-lg-6 col-6">
+            <label >Time Period(years)</label>
+            <input type="text" id="typeNumber" class="form-control" name="timePeriod" #timePeriod="ngModel" [(ngModel)]="service.formData.timePeriod"/>  
+        </div>
+    
+</div>
+
+    <div class="form-group col-lg-12 col-12">
+        <label class="form-label" for="typeNumber">Rate Of Interest</label>
+        <input type="text" id="typeNumber" class="form-control" name="rateOfInterest" #rateOfInterest="ngModel" [(ngModel)]="service.formData.rateOfInterest" />
+        
+    </div>
+    <div class="form-group col-lg-12 col-12">
+        <label>Created Date</label>
+        <input type="datetime-local"  class="form-control" name="createdDate" #createdDate="ngModel" [(ngModel)]="service.formData.createdDate" />
+    </div>
+
+<div class="form-group">
+<button class="btn btn-primary" type="submit">Save</button>
+</div>
+</div>
+</form>

@@ -1,0 +1,23 @@
+<div class="cards">
+<mat-card class="shadow p-3 mb-5 bg-white rounded" style="padding: 20px;" >
+    <mat-card-title>{{loantype}}</mat-card-title>
+    <mat-card-subtitle>{{date}}</mat-card-subtitle>
+    <mat-card-content>
+      <p>Loan Amount {{amount}}</p>
+      <p>Rate Of Interest {{rateofinterest}}</p>
+      <p>Time Period(years) {{timeperiod}}</p>
+      <!-- <p>{{loanofferid}}</p> -->
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="row">
+      <div class="col-sm-6">
+      <button mat-raised-button color="primary" class="btn btn-dark" (click)="openDialog(loanofferid,lenderid)">Edit</button>
+      </div>
+    <div class="col-sm-6">
+      <button mat-raised-button color="warn" class="btn btn-dark" (click)="onDelete(loanofferid,lenderid)">Remove</button>
+    </div>
+  </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

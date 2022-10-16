@@ -1,0 +1,44 @@
+
+<section class="msger">
+  <header class="msger-header">
+    <div class="msger-header-title">
+      <i class="fas fa-comment-alt"></i> Chat
+    </div>
+    <div class="msger-header-options">
+      <span><i class="fas fa-cog"></i></span>
+    </div>
+  </header>
+
+  <main class="msger-chat">
+    <!-- <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+          <p  class="" *ngFor="let chatMessage of webSocketService.chatMessages">
+          <strong>{{chatMessage.user}}: </strong>
+          <span>{{chatMessage.message}}</span>
+        </p>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="msg left-msg">
+      <div class="msg-bubble">
+        <p class="" *ngFor="let chatMessage of webSocketService.chatMessages">
+          <mat-card class="input-message"><strong>{{chatMessage.user}}: </strong>
+            <span>{{chatMessage.message}}</span>
+          </mat-card>
+        </p>
+        <div class="msg-text">
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <form (ngSubmit)="sendMessage(sendForm,email)" #sendForm="ngForm" class="msger-inputarea">
+    <!-- <input type="text" class="form-control" name="user" id="input-user" ngModel> -->
+    <p>{{email}}</p>
+    <input type="text" class="msger-input" name="message" id="input-message" ngModel>
+    <button type="submit" class="msger-send-btn">Send</button>
+  </form>
+</section>

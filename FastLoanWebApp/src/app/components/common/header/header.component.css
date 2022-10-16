@@ -1,0 +1,23 @@
+.spacer{
+  flex: 1 1 auto;
+}
+.logo-spacer{
+margin-left: 3px;
+}
+.logo-layout{
+color: #4361ee;
+font-family: 'Monoton', cursive; 
+}
+.logo{
+height: 30px;
+width: 30px;
+}
+.toolbar-row{
+font-family:montserrat;
+
+}
+.toolbar-row a{
+font-family:montserrat;
+font-size:medium;
+
+}
